@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+    <div class="settings">
+
+        <div  class="drawing-mode switch-container">
+            <label>Kreslící režim</label>
+            <label class="switch">
+                <input class="drawing-mode-switch" type="checkbox" checked>
+                <span class="slider"></span>
+            </label>
+        </div>
+        
+        <div class="settings-section">
+            <label>Barva objektu</label>
+            <input class="slider-bar R-color-slider-bar" type="range" min="0" max="255" value="255">
+            <input class="slider-bar G-color-slider-bar" type="range" min="0" max="255" value="0">
+            <input class="slider-bar B-color-slider-bar" type="range" min="0" max="255" value="0">
+            <div class="color"></div>
+
+            <div  class="switch-container">
+                <label>Duhová barva</label>
+                <label class="switch">
+                    <input class="rainbow-switch" type="checkbox" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+            
+
+            <div class="switch-container">
+                <label>Obrys</label>
+                <label class="switch">
+                    <input class="stroke-switch" type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            
+
+
+            <div  class="switch-container">
+                <label>Barva obrysu</label>
+                <label class="switch">
+                    <input class="stroke-color-switch" type="checkbox" checked>
+                    <span class="slider stroke-color-slider"></span>
+                </label>
+            </div>
+
+
+            <div  class="switch-container">
+                <label>Stín</label>
+                <label class="switch">
+                    <input class="shadow-switch" type="checkbox" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+
+
+        </div>
+
+        <div class="settings-section">
+            <label>Velikost</label>
+            <input class="slider-bar size-slider-bar" type="range" min="3" max="103" value="13">
+
+            <div  class="switch-container">
+                <label>Náhodná velikost</label>
+                <label class="switch">
+                    <input class="random-size-switch" type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            
+
+            <div  class="switch-container">
+                <label>Změna velikosti v čase</label>
+                <label class="switch">
+                    <input class="resize-switch" type="checkbox" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
+        <div class="settings-section">
+            <button class="shape-button">Čtverec</button>
+            <button class="shape-button active">Kruh</button>
+            <button class="shape-button">Hvězda</button>
+            <button class="shape-button">Polygon</button>
+
+        </div>
+        
+
+        
+        
+        <div class="settings-section">
+            <div  class="switch-container">
+                <label>Gravitace</label>
+                <label class="switch">
+                    <input class="gravitation-switch" type="checkbox" checked>
+                    <span class="slider"></span>
+                </label>
+            </div>
+            
+    
+            <label>Síla gravitace</label>
+            <input class="slider-bar gravitation-speed-slider-bar" type="range" min="0" max="500" value="0">
+    
+            <div  class="switch-container">
+                <label>Rotace</label>
+                <label class="switch">
+                    <input class="rotation-switch" type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+            
+    
+            <label>Rychlost rotace</label>
+            <input class="slider-bar rotation-speed-slider-bar" type="range" min="0" max="500" value="100">
+    
+            <label>Množství generovaných objektů</label>
+            <input class="slider-bar generated-particles-amount-slider-bar" type="range" min="1" max="10" value="3">
+        </div>
+        
+
+        <p class="warning">při větším množství generovaných objektů se může hra sekat!</p>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
